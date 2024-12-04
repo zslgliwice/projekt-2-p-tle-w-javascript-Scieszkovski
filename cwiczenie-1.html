@@ -24,9 +24,17 @@
 		function wylosuj()
 		{
 			
-			
+			var ile = parseInt(document.getElementById('ile').value);
+			var wynik = "";
+
+			for(var i = 0; i <ile; i++){
 			
 			var liczba = Math.floor(Math.random() * 1000) + 1;
+			wynik += liczba + " ";
+
+			}
+
+			document.getElementById('wynik').textContent = "Liczby: " + wynik;
 			
 		}
 

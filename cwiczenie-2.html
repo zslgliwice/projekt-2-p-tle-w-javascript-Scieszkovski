@@ -24,7 +24,54 @@
 		function generuj()
 		{
 			
+			var x = document.getElementById('x').value;
+			var  liczba = parseInt(x);
+
+			var wynik = document.getElementById('wynik');
+			wynik.innerHTML = "";
+
+			if(isNaN(liczba)){
+
+				wynik.innerHTML = "Podane x nie jest liczbą!";
+				return;
+
+			}else if(liczba < 0){
+
+				wynik.innerHTML = "Podane x jest ujemne!";
+				return;
+
+			}else if(liczba === 0){
+
+				wynik.innerHTML = "Podane x jest równe zero!";
+				return;
+
+			}
+
+			wynik.innerHTML = "Liczby parzyste: ";
+			for(var i = 1; i <= liczba; i++){
+
+				if(i % 2 === 0){
+
+					wynik.innerHTML += i + " ";
+
+				}
+			}
+
+			wynik.innerHTML += "Liczby nieparzyste: ";
+
+			for(var i = 0; i <= liczba; i++){
+
+				if(i % 2 !== 0){
+
+					wynik.innerHTML += i +" ";
+
+				}
+			}
 		}
+
+			 
+
+		
 
 	</script>
 
